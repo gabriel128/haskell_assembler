@@ -1,0 +1,115 @@
+
+==================== FINAL INTERFACE ====================
+2017-11-21 06:46:25.804448711 UTC
+
+interface main@main:Main 8002
+  interface hash: 24fd0b7f0fe4706f7624b81d6af2c18e
+  ABI hash: 07b78220854b755f9afe7955757ad11f
+  export-list hash: 9313791ad61a6f46b65242c0186617d1
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: aec672e4faee11dbd0af900870981ec7
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.cleanComments
+  Main.cleanFile
+  Main.cleanSpaces
+  Main.main
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+                      split-0.2.3.2@split-0.2.3.2-CJl40zTyCIV16Pr60nb7CT
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  split-0.2.3.2@split-0.2.3.2-CJl40zTyCIV16Pr60nb7CT:Data.List.Split 272c5cfa667e04d85d90f02a3d135474
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+4f74963f86ca205fc772e6b8c2332028
+  cleanComments :: [GHC.Base.String] -> [GHC.Base.String]
+  {- Strictness: x -}
+40ade26ddca0143be338826e3afa6c2b
+  cleanFile :: [GHC.Base.String] -> [GHC.Base.String]
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: [GHC.Base.String]) ->
+                 case Main.cleanComments ret_ty [[GHC.Types.Char]] of {}) -}
+57ef13140665610031d89b2bdd264599
+  cleanSpaces :: [GHC.Base.String] -> [GHC.Base.String]
+  {- Arity: 1,
+     Unfolding: (GHC.List.filter
+                   @ [GHC.Types.Char]
+                   Main.cleanSpaces1) -}
+8dd5d8afed288e0a6f410f0b7f28f85c
+  cleanSpaces1 :: [GHC.Types.Char] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: [GHC.Types.Char]) ->
+                 GHC.Classes.$fEq[]_$s$c/=1 ds Main.cleanSpaces2) -}
+152ad3b846d661823bfabafbf38bf31f
+  cleanSpaces2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "\r"#) -}
+8830c6f60245e06414a81f8e38a8d089
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f9f653ffc0703839345dbd6abe279dca
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Main.main2
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (case Main.cleanComments ret_ty GHC.Base.String of {})
+                   GHC.Types.True
+                   ipv2 } }) -}
+af59143ce978cdc8ee580a8852f6b259
+  main2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "../06/add/Add.asm"#) -}
+0b81042cfb2df034b0107bc48b22ae0b
+  main3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
